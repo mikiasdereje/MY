@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY - Futuristic AI Assistant</title>
+    <meta name="description" content="MY - A futuristic AI assistant interface" />
+    <meta name="author" content="MY" />
+
+    <meta property="og:title" content="MY - Futuristic AI Assistant" />
+    <meta property="og:description" content="MY - A futuristic AI assistant interface" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="navbar">
+        <div class="logo">
+          <div class="logo-text">MY</div>
+          <div class="logo-glow"></div>
+        </div>
+        
+        <div class="nav-actions">
+          <button class="nav-button creator-info-btn" title="Creator Info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg>
+          </button>
+          
+          <button class="nav-button" title="Notifications">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+          </button>
+          
+          <button class="nav-button" title="Messages">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </button>
+          
+          <button id="newChatBtn" class="new-chat-btn">
+            <span class="desktop-text">New Chat</span>
+            <span class="mobile-text">+</span>
+          </button>
+          
+          <button class="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </header>
+
+      <div id="chatContainer" class="chat-container">
+        <!-- Welcome screen will be displayed when no messages -->
+        <div id="welcomeScreen" class="welcome-screen">
+          <div class="welcome-content">
+            <h2 class="welcome-title">Welcome to <span class="text-accent">MY</span></h2>
+            <p class="welcome-subtitle">
+              Your futuristic AI assistant. Ask me anything or type a message to begin our conversation.
+            </p>
+            <div class="creator-card">
+              <p class="creator-label">Created by</p>
+              <p class="creator-name">MIKIAS (MIKO)</p>
+              <p class="creator-title">AI Research & Development</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Chat messages will be appended here -->
+      </div>
+
+      <!-- Example prompts container -->
+      <div id="examplePrompts" class="example-prompts">
+        <button class="example-prompt-btn">What are your capabilities?</button>
+        <button class="example-prompt-btn">Who created you?</button>
+      </div>
+
+      <div class="chat-input-container">
+        <form id="messageForm" class="chat-input-form">
+          <input 
+            type="text" 
+            id="messageInput" 
+            class="chat-input" 
+            placeholder="Send a message..." 
+            autocomplete="off"
+          >
+          <button type="submit" id="sendButton" class="send-button" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+          </button>
+        </form>
+      </div>
+      
+      <!-- Creator Info Modal -->
+      <div id="creatorInfoModal" class="creator-info-modal">
+        <div class="modal-content">
+          <h3 class="modal-title">About MY</h3>
+          <div class="modal-divider"></div>
+          <p class="modal-creator-name">Created by MIKIAS</p>
+          <p class="modal-creator-subtitle">Pioneering AI for the future</p>
+          <p class="modal-copyright">© 2025 MIKIAS AI Technologies</p>
+        </div>
+      </div>
+      
+      <!-- Toast notification -->
+      <div id="toast" class="toast">
+        <div class="toast-content">
+          <div class="toast-title">Welcome to MY</div>
+          <div class="toast-description">Created by MIKIAS - Your future is now</div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
